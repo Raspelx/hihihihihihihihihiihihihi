@@ -1,8 +1,80 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
-local Window = OrionLib:MakeWindow({Name = "Universal Gui", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
-	Name = "Self Hbe",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local GUI = Mercury:Create{
+    Name = "Astrax",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Legacy,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+local Tab = GUI:Tab{
+	Name = "Reach",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:Button{
+	Name = "Hitboxlarını Legit Bir Şekilde Büyüt",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
+game.workspace.Rappleq.Hitbox.Dribble.CanCollide = false
+game.workspace.Rappleq.Hitbox.Kick.Size = Vector3.new(15, 5, 15)
+game.workspace.Rappleq.Hitbox.Kick.CanCollide = false
+game.workspace.Rappleq.Hitbox.Goalie.Size = Vector3.new(10, 10, 10)
+game.workspace.Rappleq.Hitbox.Goalie.CanCollide = false
+game.workspace.Rappleq.Hitbox.Slide.Size = Vector3.new(15, 5, 15)
+game.workspace.Rappleq.Hitbox.Slide.CanCollide = false
+game.workspace.Rappleq.Hitbox.Header.Size = Vector3.new(15, 2, 15)
+game.workspace.Rappleq.Hitbox.Header.CanCollide = false end
+}
+local Tab = GUI:Tab{
+	Name = "Hitboxları Göster/Gösterme",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:Button{
+	Name = "Dribble Hitbox Göster",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Dribble.Transparency = 0.7 end
+}
+Tab:Button{
+	Name = "Dribble Hitbox Gösterme",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Dribble.Transparency = 1 end
+}
+Tab:Button{
+	Name = "Kick Hitbox Göster",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Kick.Transparency = 0.7 end
+}
+Tab:Button{
+	Name = "Kick Hitbox Gösterme",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Kick.Transparency = 1 end
+}
+Tab:Button{
+	Name = "Goalie Hitbox Göster",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Goalie.Transparency = 0.7 end
+}
+Tab:Button{
+	Name = "Goalie Hitbox Gösterme",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Goalie.Transparency = 1 end
+}
+Tab:Button{
+	Name = "Header Hitbox Göster",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Header.Transparency = 0.7 end
+}
+Tab:Button{
+	Name = "Header Hitbox Gösterme",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Header.Transparency = 1 end
+}
+Tab:Button{
+	Name = "Slide Hitbox Göster",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Slide.Transparency = 0.7 end
+}
+Tab:Button{
+	Name = "Slide Hitbox Gösterme",
+	Description = nil,
+	Callback = function()game.workspace.Rappleq.Hitbox.Slide.Transparency = 1 end
+}
