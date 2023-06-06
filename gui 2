@@ -1,0 +1,67 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Astrax", "GrapeTheme")
+local Tab = Window:NewTab("Reach")
+local Section = Tab:NewSection("Hbe")
+Section:NewButton("Hitboxlarını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()
+game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Kick.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Kick.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Goalie.Size = Vector3.new(10, 10, 10)
+game.workspace.ruzgar12349oo.Hitbox.Goalie.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Slide.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Slide.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
+game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
+    print("Clicked")
+end)
+local Tab = Window:NewTab("Show Hbe")
+local Section = Tab:NewSection("Show Hbe")
+Section:NewToggle("Show Dribble Hbe", "Dribble Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Show Kick Hbe", "Kick Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Show Kick Hbe", "Kick Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Show Goalie Hbe", "Goalie Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Goalie.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Goalie.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Show Slide Hbe", "Slide Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Slide.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Slide.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Show Header Hbe", "Header Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Header.Transparency = 1
+    if state then game.workspace.ruzgar12349oo.Hitbox.Header.Transparency = 0.7
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+local Tab = Window:NewTab("Gui")
+local Section = Tab:NewSection("Gui Özelleştirme")
+Section:NewKeybind("Gui Toggle", "Guiyi açıp kapama tuşunu ayarlarsınız", Enum.KeyCode.M, function()
+	Library:ToggleUI()
+end)
