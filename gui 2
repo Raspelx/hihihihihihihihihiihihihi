@@ -1,8 +1,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("Astrax", "GrapeTheme")
-local Tab = Window:NewTab("Reach")
-local Section = Tab:NewSection("Hbe")
+local Tab = Window:NewTab("Legit Sets")
+local Section = Tab:NewSection("Legit")
 Section:NewButton("Hitboxlarını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()
 game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
 game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
@@ -16,17 +16,32 @@ game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
 game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
     print("Clicked")
 end)
+local Section = Tab:NewSection("Custom")
+Section:NewButton("Dribble Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
+    print("Clicked")
+end)
+Section:NewButton("Kick Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Kick.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Kick.CanCollide = false
+    print("Clicked")
+end)
+Section:NewButton("Goalie Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Goalie.Size = Vector3.new(10, 10, 10)
+game.workspace.ruzgar12349oo.Hitbox.Goalie.CanCollide = false
+    print("Clicked")
+end)
+Section:NewButton("Slide Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Slide.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Slide.CanCollide = false
+    print("Clicked")
+end)
+Section:NewButton("Header Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
+game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
+    print("Clicked")
+end)
+
 local Tab = Window:NewTab("Show Hbe")
 local Section = Tab:NewSection("Show Hbe")
 Section:NewToggle("Show Dribble Hbe", "Dribble Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 1
     if state then game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 0.7
-        print("Toggle On")
-    else
-        print("Toggle Off")
-    end
-end)
-Section:NewToggle("Show Kick Hbe", "Kick Hitboxını Gösterir", function(state)game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 1
-    if state then game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 0.7
         print("Toggle On")
     else
         print("Toggle Off")
