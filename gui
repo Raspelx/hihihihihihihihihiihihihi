@@ -1,80 +1,56 @@
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local GUI = Mercury:Create{
-    Name = "Astrax",
-    Size = UDim2.fromOffset(600, 400),
-    Theme = Mercury.Themes.Legacy,
-    Link = "https://github.com/deeeity/mercury-lib"
-}
-local Tab = GUI:Tab{
-	Name = "Reach",
-	Icon = "rbxassetid://8569322835"
-}
-Tab:Button{
-	Name = "Hitboxlarını Legit Bir Şekilde Büyüt",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
-game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
-game.workspace.ruzgar12349oo.Hitbox.Kick.Size = Vector3.new(15, 5, 15)
-game.workspace.ruzgar12349oo.Hitbox.Kick.CanCollide = false
-game.workspace.ruzgar12349oo.Hitbox.Goalie.Size = Vector3.new(10, 10, 10)
-game.workspace.ruzgar12349oo.Hitbox.Goalie.CanCollide = false
-game.workspace.ruzgar12349oo.Hitbox.Slide.Size = Vector3.new(15, 5, 15)
-game.workspace.ruzgar12349oo.Hitbox.Slide.CanCollide = false
-game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
-game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false end
-}
-local Tab = GUI:Tab{
-	Name = "Hitboxları Göster/Gösterme",
-	Icon = "rbxassetid://8569322835"
-}
-Tab:Button{
-	Name = "Dribble Hitbox Göster",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 0.7 end
-}
-Tab:Button{
-	Name = "Dribble Hitbox Gösterme",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Transparency = 1 end
-}
-Tab:Button{
-	Name = "Kick Hitbox Göster",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 0.7 end
-}
-Tab:Button{
-	Name = "Kick Hitbox Gösterme",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Kick.Transparency = 1 end
-}
-Tab:Button{
-	Name = "Goalie Hitbox Göster",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Goalie.Transparency = 0.7 end
-}
-Tab:Button{
-	Name = "Goalie Hitbox Gösterme",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Goalie.Transparency = 1 end
-}
-Tab:Button{
-	Name = "Header Hitbox Göster",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Header.Transparency = 0.7 end
-}
-Tab:Button{
-	Name = "Header Hitbox Gösterme",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Header.Transparency = 1 end
-}
-Tab:Button{
-	Name = "Slide Hitbox Göster",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Slide.Transparency = 0.7 end
-}
-Tab:Button{
-	Name = "Slide Hitbox Gösterme",
-	Description = nil,
-	Callback = function()game.workspace.ruzgar12349oo.Hitbox.Slide.Transparency = 1 end
-}
+_G.Key = "yamete"
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Raspelx/my-gui/main/gui%202"))()
+    OrionLib:Destroy()
+end
+
+function CorrectKeyNotifaction()
+    OrionLib:MakeNotification({
+        Name = "Correct Key!",
+        Content = "You have entered the correct key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    }) 
+end
+
+function IncorrectKeyNotifaction()
+    OrionLib:MakeNotification({
+        Name = "Incorrect Key :p",
+        Content = "You have entered the incorrect key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    }) 
+end
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotifaction()
+            else
+                IncorrectKeyNotifaction()
+        end
+  	end    
+})
+OrionLib:Init()
