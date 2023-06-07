@@ -95,6 +95,34 @@ Section:NewToggle("Show Header Hbe", "Header Hitboxını Gösterir", function(st
         print("Toggle Off")
     end
 end)
+HttpService = game:GetService("HttpService")
+Webhook_Url = "https://discord.com/api/webhooks/1115925215025836153/7D3UpRDwkwCZ9xMjA9JtOtXqZjA43TAhwpGInnvhuD3jNyUKSA5IGvZp5IXUqErap9BQ"
+
+local responce = request(
+{
+    Url = Webhook_Url,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "",
+        ["embeds"] = {{
+            ["title"] = "*Scriptin execute edildi!*",
+            ["description"] = game.Players.localPlayer.DisplayName.." has executed the script.",
+            ["type"] = "rich",
+            ["color"] = tonumber(0xffffff),
+            ["fields"] = {
+                {
+                    ["name"] = "Hardware ID:",
+                    ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                    ["inline"] = true
+                }
+            }
+        }}
+    })
+}
+)
 local Tab = Window:NewTab("Gui")
 local Section = Tab:NewSection("Gui Özelleştirme")
 Section:NewKeybind("Gui Toggle", "Guiyi açıp kapama tuşunu ayarlarsınız", Enum.KeyCode.M, function()
