@@ -16,7 +16,7 @@ game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
 game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
     print("Clicked")
 end)
-local Section = Tab:NewSection("Custom")
+local Section = Tab:NewSection("Custom Select")
 Section:NewButton("Dribble Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expander", function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
 game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
     print("Clicked")
@@ -37,6 +37,20 @@ Section:NewButton("Header Hitboxını Legit Bir Şekilde Büyüt", "Hitbox Expan
 game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
     print("Clicked")
 end)
+
+Section:NewKeybind("Reachini Legit Yap", "KeybindInfo", Enum.KeyCode.F, function()game.workspace.ruzgar12349oo.Hitbox.Dribble.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Dribble.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Kick.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Kick.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Goalie.Size = Vector3.new(10, 10, 10)
+game.workspace.ruzgar12349oo.Hitbox.Goalie.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Slide.Size = Vector3.new(15, 5, 15)
+game.workspace.ruzgar12349oo.Hitbox.Slide.CanCollide = false
+game.workspace.ruzgar12349oo.Hitbox.Header.Size = Vector3.new(15, 2, 15)
+game.workspace.ruzgar12349oo.Hitbox.Header.CanCollide = false
+	print("You just clicked the bind")
+end)
+
 local Tab = Window:NewTab("Semi Customizable")
 local Section = Tab:NewSection("Dribble")
 Section:NewSlider("Dribble Hitbox", "SliderInfo", 50, 0, function(d) -- 500 (MaxValue) | 0 (MinValue)
